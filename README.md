@@ -29,7 +29,7 @@ Machine learning side was developed with **PyTorch**. We used Res-Net50 pretrain
 ### PyTorch
 In `/PyTorch` folder you can see two files:
 - `predict.py` works with trained ResNet, gets two images as input and returns 2 images with detected houses
-- `train.py` - ResNet is build, dataset is collected and network is trained
+- `torch_object_detection.py` - ResNet is build, dataset is collected and network is trained
 
 ### Presentation
 Check on [Google Docs](https://docs.google.com/presentation/d/e/2PACX-1vQGgs65mox96CRPLiuKG7pkToq_3VL4xF8cz6vKprEPQI5A4dg9TZyJkIb6WLY3hIrAt9Pazc-4pzoj/pub)
