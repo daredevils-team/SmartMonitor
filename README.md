@@ -42,3 +42,6 @@ Our future plans are:
 - [ ] Better natural disaster news aggregation;
 - [ ] Retraining neural network to be able to detect other objects and show more detailed information about damage;
 - [ ] Azure/DigiatOcean Deployment
+
+### Credits
+This amazing pic in the header is made by [MacroVector](https://www.freepik.com/macrovector)
