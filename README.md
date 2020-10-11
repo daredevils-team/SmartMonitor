@@ -23,11 +23,10 @@ Machine learning side was developed with **PyTorch**. We used Res-Net50 pretrain
 1. Pick up a natural disaster;
 2. Check news and photos with detected by ResNet damaged houses
 
-![Report](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/report.png)
-*Report*
-
 ### Demo
-[Watch demo](https://drive.google.com/file/d/1Qsisjlhe3Oudt5JoPn6MHNkOs5UPZqd9/view?usp=sharing)
+
+To watch demo click on the image below
+[![Everything Is AWESOME](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/report.png)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 ### PyTorch
 In `/PyTorch` folder you can see two files:
