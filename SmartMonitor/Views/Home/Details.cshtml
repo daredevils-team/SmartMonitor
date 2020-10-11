@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@model IEnumerable<PieceOfNews>
+
+
+<section id="aboutme" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"
+         class="section">
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h4 class="is-4 has-text-centered has-text-weight-light is-uppercase">News</h4>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="card mb-3">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            @item.title
+                        </p>
+                        <a href="#" class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            @item.description
+                            <br>
+                            <time datetime="@item.publishedAt">@item.publishedAt</time>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        @item.author
+                    </footer>
+                </div>
+            }
+        </div>
+    </div>
+</section>

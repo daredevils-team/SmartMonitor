@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Color"] = "is-primary";
+}
+
+@model NewsViewModel
+
+<section id="aboutme" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"
+         class="section">
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h4 class="has-text-centered"><i style="color: lightseagreen;" class="fas fa-file-contract"></i> Report </h4>
+            </div>
+            <div class="columns is-centered">
+
+                <div class="column is-half">
+                    <div class="subtitle">
+                        <h4 class="has-text-centered"><i style="color: deepskyblue;" class="fas fa-images"></i> News</h4>
+                    </div>
+                    @foreach (var item in Model.News)
+                    {
+
+                        <div class="card mb-3">
+                            <header class="card-header">
+                                <p class="card-header-title mb-0">
+                                    <a class="pr-3" href="@item.url"><i class="fas fa-external-link-alt"></i></a> @item.title
+                                </p>
+                                <span class="card-header-title mt-5 tag is-light"><time datetime="@item.publishedAt">@item.publishedAt</time></span>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                                    <span class="icon">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    @item.description
+                                    <br>
+
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <p class="ml-3 mr-2 my-2"><i class="fas fa-users mr-2"></i><i>@item.author</i></p>
+                            </footer>
+                        </div>
+                    }
+                </div>
+                <div class="column is-half">
+                    <div class="subtitle">
+                        <h4 class="has-text-centered"><i class="fas fa-images"></i> Photos</h4>
+                    </div>
+                    <div class="tile has-text-centered is-ancestor">
+                        <div class="tile is-vertical is-parent">
+                            <div class="tile is-child box">
+                                <p class="title mb-0"><img id="myImg" class="myImages" alt="Before (raw)" src="@Model.img1" /></p>
+                                <span>Before (raw)</span>
+                            </div>
+                            <div class="tile is-child box">
+                                <p class="title mb-0"><img id="myImg" class="myImages" alt="After (raw)" src="@Model.img2" /></p>
+                                <span>After (raw)</span>
+                            </div>
+
+                        </div>
+                        <div class="tile is-parent is-vertical ">
+                            <div class="tile is-child box">
+                                <p class="title mb-0"><img id="myImg" class="myImages" alt="Before (detected)" src="@Model.img3" /></p>
+                                <span>Before (detected)</span>
+                            </div>
+                            <div class="tile is-child box">
+                                <p class="title mb-0"><img id="myImg" class="myImages" alt="After (detected)" src="@Model.img4" /></p>
+                                <span>After (detected)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <h4 class="has-text-centered"><i class="fas fa-info"></i> Details</h4>
+
+                    </div>
+                    <p class="has-text-centered">@Model.coeff</p>
+                </div>
+
+            </div>
+        </div>
+</section>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SmartMonitor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src="https://kit.fontawesome.com/82aef158e1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css" />
+
+</head>
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <nav data-aos="fade-down" data-aos-duration="600" class="navbar @ViewData["Color"] is-mobile">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item has-text-weight-bold" href="/">
+                        <span class="icon mr-1">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        <span>SmartMonitor</span>
+                    </a>
+                    <!-- Navbar icon -->
+                    <span class="navbar-burger burger" data-target="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="#aboutme" class="navbar-item">
+                            <span class="icon mr-1">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span>About</span>
+                        </a>
+
+                        <a href="https://xtenzq.github.io/blog" class="navbar-item">
+                            <span class="icon mr-1">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <span>Authors</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            &copy; 2020 - SmartMonitor - JunctionX Seoul 2020
+        </div>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.my-gallery').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                cssEase: 'linear'
+            });
+        });
+    </script>
+    <script>
+        // create references to the modal...
+        var modal = document.getElementById('myModal');
+        // to all images -- note I'm using a class!
+        var images = document.getElementsByClassName('myImages');
+        // the image in the modal
+        var modalImg = document.getElementById("img01");
+        // and the caption in the modal
+        var captionText = document.getElementById("caption");
+
+        // Go through all of the images with our custom class
+        for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // and attach our click listener for this image.
+            img.onclick = function (evt) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

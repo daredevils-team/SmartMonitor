@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Color"] = "";
+}
+@using SmartMonitor.Models
+@model Region
+<!-- Hero section -->
+<section class="hero is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-half">
+                    <div class="content hello">
+
+                        <p style="color: black; font-size: 32px;">
+                            <span class="shadow is-success">
+                                Monitor
+                            </span> natural disaster consequences with<br />
+                            <span class="shadow is-danger">SmartMonitor</span><br>
+                            <span style="font-size: 18px; font-style: italic; margin-top: -20px;">AI-driven monitor</span>
+                        </p>
+
+
+                        <div>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select onchange="location = this.value;">
+                                        <option>Select region</option>
+                                        <option value="Details/Index/Matthew%20Hurricane">Matthew Hurricane</option>
+                                        <option value="Details/Index/Matthew%20Hurricane">Russia</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <p style="text-align: left; font-size: 14px; margin-top: 5px; margin-left: 10px;">
+                                Only two regions available at the moment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-2 column is-narrow has-text-centered">
+                    <!-- Pic by macrovector https://www.freepik.com/free-vector/natural-disaster-set-eruption-wildfire-flood-tornado-drought-tsunami-isometric-compositions-isolated_6800043.htm -->
+                    <img src="~/images/main.png" width="500">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
