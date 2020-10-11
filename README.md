@@ -26,7 +26,7 @@ Machine learning side was developed with **PyTorch**. We used Res-Net50 pretrain
 ### Demo
 
 To watch demo click on the image below
-[![Everything Is AWESOME](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/report.png)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+[![Watch demo](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/report.png)](https://drive.google.com/file/d/1Qsisjlhe3Oudt5JoPn6MHNkOs5UPZqd9/view "Watch demo")
 
 ### PyTorch
 In `/PyTorch` folder you can see two files:
