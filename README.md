@@ -1,5 +1,7 @@
 # JunctionX Seoul 2020 SIA Track
 
+![CoverPhoto](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/main.png?token=ACNCSV7GOILLCZL6FDYJ7UC7RPE2W)
+
 ## SmartMonitor
 
 Detect damaged building by natural disasters and get a brief information about it.
