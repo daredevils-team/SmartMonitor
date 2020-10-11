@@ -13,6 +13,16 @@
 
 </head>
 <body>
+    <script>
+        function swipe() {
+            var largeImage = document.getElementById('largeImage');
+            largeImage.style.display = 'block';
+            largeImage.style.width = 200 + "px";
+            largeImage.style.height = 200 + "px";
+            var url = largeImage.getAttribute('src');
+            window.open(url, 'Image', 'width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+        }
+    </script>
     <header>
         <!-- NAVBAR -->
         <nav data-aos="fade-down" data-aos-duration="600" class="navbar @ViewData["Color"] is-mobile">
@@ -32,21 +42,7 @@
                     </span>
                 </div>
                 <div id="navMenu" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="#aboutme" class="navbar-item">
-                            <span class="icon mr-1">
-                                <i class="fas fa-project-diagram"></i>
-                            </span>
-                            <span>About</span>
-                        </a>
 
-                        <a href="https://xtenzq.github.io/blog" class="navbar-item">
-                            <span class="icon mr-1">
-                                <i class="fas fa-users"></i>
-                            </span>
-                            <span>Authors</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -63,18 +59,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.my-gallery').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                cssEase: 'linear'
-            });
-        });
-    </script>
     <script>
         // create references to the modal...
         var modal = document.getElementById('myModal');
@@ -102,6 +86,7 @@
             modal.style.display = "none";
         }
     </script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

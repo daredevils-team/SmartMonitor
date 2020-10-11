@@ -1,0 +1,1 @@
+relative damage is 0.1
