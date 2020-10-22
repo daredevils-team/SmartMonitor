@@ -1,4 +1,5 @@
-# JunctionX Seoul 2020 SIA Track
+# JunctionX Seoul 2020 Hackathon
+### 🥉 SIA Track 3rd winner
 
 ![CoverPhoto](https://raw.githubusercontent.com/xtenzQ/JunctionX-Seoul-2020/main/main.png?token=ACNCSV7GOILLCZL6FDYJ7UC7RPE2W)
 
